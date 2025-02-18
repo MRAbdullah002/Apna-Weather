@@ -48,7 +48,7 @@ class MyWeatherScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final weatherState = ref.read(weatherProvider);
+    final weatherState = ref.watch(weatherProvider);
     final mq = MediaQuery.of(context).size;
 
     return Scaffold(
