@@ -16,6 +16,11 @@ String getWeatherAnimation(dynamic weather) {
       return isDay
           ? 'assets/partialcloudyday.json'
           : 'assets/partialcloudynight.json';
+    } 
+    else if (condition.contains('few cloudy')) {
+      return isDay
+          ? 'assets/partialcloudyday.json'
+          : 'assets/partialcloudynight.json';
     } else if (condition.contains('cloudy') || condition.contains('overcast')) {
       return 'assets/clouds.json';
     } else if (condition.contains('mist') ||
@@ -23,18 +28,21 @@ String getWeatherAnimation(dynamic weather) {
         condition.contains('freezing fog') ||
         condition.contains('haze')) {
       return 'assets/hazyshower.json';
-    } else if (condition.contains('patchy rain') ||
-        condition.contains('light rain') ||
-        condition.contains('moderate rain') ||
-        condition.contains('heavy rain')) {
+    } else if (condition.contains('patchy rain')) {
       return isDay ? 'assets/sunnyrainy.json' : 'assets/night rain.json';
-    } else if (condition.contains('rain shower') ||
+    }else if(condition.contains('light rain') ||
+        condition.contains('moderate rain') ||
+        condition.contains('heavy rain')){
+      return 'assets/rain.json';
+        }
+    
+     else if (condition.contains('rain shower') ||
         condition.contains('torrential rain shower')) {
       return 'assets/rainshower.json';
     } else if (condition.contains('freezing rain') ||
         condition.contains('drizzle') ||
         condition.contains('sleet')) {
-      return 'assets/freezingrain.json';
+      return 'assets/rain.json';
     } else if (condition.contains('snow') ||
         condition.contains('blowing snow') ||
         condition.contains('blizzard') ||

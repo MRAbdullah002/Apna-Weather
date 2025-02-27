@@ -20,7 +20,7 @@ class WeatherNotifier extends StateNotifier<AsyncValue<Weathermodel?>> {
     fetchWeather();
   }
 
-  final _weatherServices = Weatherservices('d47c57d6f0014d7b91893727251402');
+  final _weatherServices = Weatherservices('49865ee2a9314dec92e121246251902');
 
   Future<void> fetchWeather() async {
     state = const AsyncValue.loading();
